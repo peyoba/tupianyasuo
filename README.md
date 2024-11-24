@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 图片压缩网站
 
 ## 项目说明
@@ -23,3 +24,6 @@
 - 使用 Canvas API 进行图片压缩
 - 使用 FileReader API 读取图片
 - 使用 Flex 布局实现响应式设计 
+=======
+# tupianyasuo
+>>>>>>> 4ff466871d70c0ea6f493f9a9616e6a76a0d8ec4
