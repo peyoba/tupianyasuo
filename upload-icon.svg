@@ -1,0 +1,17 @@
+<svg width="16" height="16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 云朵形状 -->
+    <path d="M51.2 36.8c0-7.06-5.74-12.8-12.8-12.8-1.15 0-2.26.15-3.32.44A9.6 9.6 0 0 0 16 28.8c0 .66.07 1.31.2 1.93A8 8 0 0 0 20 46.4h31.2a8 8 0 0 0 0-16v6.4z" 
+          fill="#007AFF" 
+          fill-opacity="0.1" 
+          stroke="#007AFF" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- 上传箭头 -->
+    <path d="M32 40V24M25.6 30.4L32 24l6.4 6.4" 
+          stroke="#007AFF" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+</svg> 

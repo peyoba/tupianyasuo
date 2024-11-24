@@ -1,0 +1,252 @@
+/* 全局样式 */
+:root {
+    --primary-color: #007AFF;
+    --background-color: #F5F5F7;
+    --card-background: #FFFFFF;
+    --text-primary: #1D1D1F;
+    --text-secondary: #86868B;
+    --border-radius: 12px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+    padding: 2rem;
+}
+
+/* 顶部区域样式 */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    background: var(--card-background);
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* 头部样式调整 */
+header {
+    text-align: center;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #1A73E8, #42B883);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 上传区域样式调整 */
+.upload-area {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-box {
+    border: 2px dashed #E5E5E7;
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(0, 122, 255, 0.03);
+}
+
+.upload-box p {
+    margin: 0;
+}
+
+.upload-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+/* 压缩设置样式 */
+.compress-settings {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.quality-control {
+    max-width: 400px;
+    margin: 1.5rem auto;
+}
+
+.quality-slider {
+    width: 100%;
+    height: 4px;
+    -webkit-appearance: none;
+    background: #E5E5E7;
+    border-radius: 2px;
+    outline: none;
+}
+
+.quality-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 122, 255, 0.2);
+    transition: transform 0.1s ease;
+}
+
+.quality-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+/* 预览区域样式 */
+.preview-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.original-image, .compressed-image {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.image-container {
+    margin: 1rem 0;
+    border-radius: calc(var(--border-radius) - 4px);
+    overflow: hidden;
+    background: #F5F5F7;
+}
+
+.preview-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-info {
+    padding: 1rem;
+    background: #F5F5F7;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* 按钮样式 */
+.button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.button:hover {
+    background: #0066DB;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+}
+
+.size-comparison {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(0, 122, 255, 0.05);
+    border-radius: 6px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .upload-box {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .preview-area {
+        grid-template-columns: 1fr;
+    }
+    
+    .compress-settings {
+        padding: 1.5rem;
+    }
+    
+    .button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* 上传图标样式 */
+.upload-icon {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.upload-box:hover .upload-icon {
+    transform: translateY(-2px);
+}
+
+.upload-box.dragover .upload-icon {
+    transform: scale(1.1);
+} 

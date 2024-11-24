@@ -1,0 +1,10 @@
+# 初始化 Git 仓库（如果还没有初始化） 
+ git init  
+ # 添加所有文件到暂存区  
+ git add 。 
+# 提交更改  
+git commit -m "初始化项目"  
+# 添加远程仓库  
+git remote add origin https://github.com/ 你的用户名/你的仓库名。git  
+# 推送到 GitHub  
+git push -u origin main # 或 master，取决于你的主分支名称
